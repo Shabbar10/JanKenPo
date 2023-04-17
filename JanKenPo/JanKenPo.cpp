@@ -28,7 +28,7 @@ void CheckWinner(char uchoice, char cchoice)
 {
     std::cout << "Comp played " << cchoice << ".\n";
 
-    if (uchoice == 'r' && cchoice == 'p')
+    if ((uchoice == 'r' && cchoice == 'p') || (uchoice == 'p' && cchoice == 's') || (uchoice == 's' && cchoice == 'r'))
     {
         std::cout << "Computer wins!\n";
         return;
@@ -38,31 +38,9 @@ void CheckWinner(char uchoice, char cchoice)
         std::cout << "Tie.\n";
         return;
     }
-    else
-    {
-        std::cout << "You win!\n";
-        return;
-    }
-
-    if (uchoice == 'p' && cchoice == 's')
-    {
-        std::cout << "Computer wins!\n";
-        return;
-    }
     else if (uchoice == 'p' && cchoice == 'p')
     {
         std::cout << "Tie.\n";
-        return;
-    }
-    else
-    {
-        std::cout << "You win!\n";
-        return;
-    }
-
-    if (uchoice == 's' && cchoice == 'r')
-    {
-        std::cout << "Computer wins!\n";
         return;
     }
     else if (uchoice == 's' && cchoice == 's')
